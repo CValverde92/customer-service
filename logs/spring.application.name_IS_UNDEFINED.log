@@ -1,0 +1,244 @@
+2025-06-04 01:25:19.726 [main] INFO  c.n.c.CustomerServiceApplicationTests - Starting CustomerServiceApplicationTests using Java 11.0.27 on NTTD-FNMQ814 with PID 36892 (started by cvalverc in C:\Users\cvalverc\Downloads\Curso de Microservicios - Bootcamp - BC61\Proyectos\Entregable Final\customer-service)
+2025-06-04 01:25:19.728 [main] DEBUG c.n.c.CustomerServiceApplicationTests - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-06-04 01:25:19.729 [main] INFO  c.n.c.CustomerServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 01:25:19.738 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-06-04 01:25:22.306 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/11.0.27+6"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@ee2ae9a, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@58b97c15], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@26994c6a]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@3cd46491], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-06-04 01:25:22.442 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-04 01:25:22.687 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-04 01:25:22.800 [cluster-rtt-ClusterId{value='683fe6d2dca9ee3a0f70701d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:198}] to localhost:27017
+2025-06-04 01:25:22.800 [cluster-ClusterId{value='683fe6d2dca9ee3a0f70701d', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:199}] to localhost:27017
+2025-06-04 01:25:22.801 [cluster-ClusterId{value='683fe6d2dca9ee3a0f70701d', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=113718100}
+2025-06-04 01:25:23.902 [main] DEBUG o.s.w.r.r.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+2025-06-04 01:25:24.688 [main] DEBUG o.s.w.r.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-06-04 01:25:26.248 [main] DEBUG o.s.w.r.r.m.a.ControllerMethodResolver - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 @ExceptionHandler
+2025-06-04 01:25:26.314 [main] DEBUG o.s.w.s.a.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-06-04 01:25:27.217 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04 01:25:27.369 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-06-04 01:25:27.381 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-06-04 01:25:27.418 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-06-04 01:25:27.419 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-06-04 01:25:27.419 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-06-04 01:25:27.420 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-06-04 01:25:27.420 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-06-04 01:25:27.420 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-06-04 01:25:27.420 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-06-04 01:25:27.747 [main] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/
+2025-06-04 01:25:27.893 [main] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:27.931 [main] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:27.932 [main] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:25:27.960 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-06-04 01:25:27.962 [main] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79: registering service...
+2025-06-04 01:25:27.966 [main] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:25:27.968 [main] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:27.986 [main] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:fa79ea5b2588b958a02d85b019872c79, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = STARTING, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@72ad577b] as "application/json"
+2025-06-04 01:25:27.999 [main] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:25:28.000 [main] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79 - registration status: 204
+2025-06-04 01:25:28.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 5
+2025-06-04 01:25:28.005 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-04 01:25:28.012 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1749018328010 with initial instances count: 2
+2025-06-04 01:25:28.017 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1749018328017, current=UP, previous=STARTING]
+2025-06-04 01:25:28.018 [main] WARN  c.n.discovery.InstanceInfoReplicator - Ignoring onDemand update due to rate limiter
+2025-06-04 01:25:28.032 [main] INFO  c.n.c.CustomerServiceApplicationTests - Started CustomerServiceApplicationTests in 9.136 seconds (JVM running for 10.279)
+2025-06-04 01:25:28.119 [nioEventLoopGroup-2-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:200}] to localhost:27017
+2025-06-04 01:25:28.171 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79: registering service...
+2025-06-04 01:25:28.171 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:25:28.173 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:28.174 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:fa79ea5b2588b958a02d85b019872c79, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = UP, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@72ad577b] as "application/json"
+2025-06-04 01:25:28.179 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:25:28.180 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79 - registration status: 204
+2025-06-04 01:25:28.453 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1749018328453, current=DOWN, previous=UP]
+2025-06-04 01:25:28.453 [SpringApplicationShutdownHook] WARN  c.n.discovery.InstanceInfoReplicator - Ignoring onDemand update due to rate limiter
+2025-06-04 01:25:30.568 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-06-04 01:25:33.017 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:25:33.018 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:33.030 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79?status=DOWN&lastDirtyTimestamp=1749018328453
+2025-06-04 01:25:33.045 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:33.046 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:25:33.048 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:33.060 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 404 NOT_FOUND
+2025-06-04 01:25:33.060 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79 - Re-registering apps/CUSTOMER-SERVICE
+2025-06-04 01:25:33.060 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79: registering service...
+2025-06-04 01:25:33.061 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:25:33.061 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:33.061 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:fa79ea5b2588b958a02d85b019872c79, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = DOWN, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@72ad577b] as "application/json"
+2025-06-04 01:25:33.063 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:25:33.064 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79 - registration status: 204
+2025-06-04 01:25:33.573 [DiscoveryClient-0] WARN  c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+2025-06-04 01:25:33.576 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-06-04 01:25:33.578 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - HTTP DELETE http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79
+2025-06-04 01:25:33.578 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:33.580 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:33.581 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:fa79ea5b2588b958a02d85b019872c79 - deregister  status: 200
+2025-06-04 01:25:33.585 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-06-04 01:25:45.047 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-06-04 01:25:45.051 [main] INFO  c.n.c.CustomerServiceApplication - Starting CustomerServiceApplication using Java 11.0.27 on NTTD-FNMQ814 with PID 28056 (C:\Users\cvalverc\Downloads\Curso de Microservicios - Bootcamp - BC61\Proyectos\Entregable Final\customer-service\target\classes started by cvalverc in C:\Users\cvalverc\Downloads\Curso de Microservicios - Bootcamp - BC61\Proyectos\Entregable Final\customer-service)
+2025-06-04 01:25:45.053 [main] DEBUG c.n.c.CustomerServiceApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-06-04 01:25:45.054 [main] INFO  c.n.c.CustomerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 01:25:46.275 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/11.0.27+6"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1291aab5, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7d133fb7], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@40bd0f8]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@7eb27768], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-06-04 01:25:46.319 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-04 01:25:46.402 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-04 01:25:46.626 [cluster-rtt-ClusterId{value='683fe6ea55eb9649fd6e37ec', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:201}] to localhost:27017
+2025-06-04 01:25:46.626 [cluster-ClusterId{value='683fe6ea55eb9649fd6e37ec', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:202}] to localhost:27017
+2025-06-04 01:25:46.627 [cluster-ClusterId{value='683fe6ea55eb9649fd6e37ec', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=68071100}
+2025-06-04 01:25:46.790 [main] DEBUG o.s.w.r.r.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+2025-06-04 01:25:47.094 [main] DEBUG o.s.w.r.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-06-04 01:25:47.787 [main] DEBUG o.s.w.r.r.m.a.ControllerMethodResolver - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 @ExceptionHandler
+2025-06-04 01:25:47.799 [main] DEBUG o.s.w.s.a.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-06-04 01:25:48.219 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-04 01:25:48.270 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-06-04 01:25:48.273 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-06-04 01:25:48.285 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-06-04 01:25:48.427 [main] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/
+2025-06-04 01:25:48.494 [main] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:48.519 [main] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:48.520 [main] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:25:48.532 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-06-04 01:25:48.533 [main] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac: registering service...
+2025-06-04 01:25:48.536 [main] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:25:48.537 [main] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:48.547 [main] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = STARTING, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@393e7546] as "application/json"
+2025-06-04 01:25:48.558 [main] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:25:48.558 [main] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac - registration status: 204
+2025-06-04 01:25:48.559 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 5
+2025-06-04 01:25:48.561 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-04 01:25:48.564 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1749018348564 with initial instances count: 3
+2025-06-04 01:25:48.565 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1749018348565, current=UP, previous=STARTING]
+2025-06-04 01:25:48.566 [main] WARN  c.n.discovery.InstanceInfoReplicator - Ignoring onDemand update due to rate limiter
+2025-06-04 01:25:48.641 [nioEventLoopGroup-3-3] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:203}] to localhost:27017
+2025-06-04 01:25:48.676 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac: registering service...
+2025-06-04 01:25:48.676 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:25:48.678 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:48.678 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = UP, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@393e7546] as "application/json"
+2025-06-04 01:25:48.682 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:25:48.682 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac - registration status: 204
+2025-06-04 01:25:49.350 [main] INFO  c.n.c.CustomerServiceApplication - Started CustomerServiceApplication in 5.293 seconds (JVM running for 6.133)
+2025-06-04 01:25:53.576 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:25:53.576 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:53.578 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:25:53.584 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:53.591 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:53.591 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:53.591 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:25:58.600 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:25:58.600 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:58.601 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:25:58.601 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:25:58.616 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:58.616 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:25:58.616 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:03.628 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:03.628 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:03.628 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:03.629 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:03.644 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:03.644 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:03.645 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:03.648 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/
+2025-06-04 01:26:03.649 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:03.650 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:03.650 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:08.647 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:08.648 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:08.662 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:08.662 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:08.663 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:08.679 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:08.679 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:13.665 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:13.665 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:13.681 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:13.682 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:13.682 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:13.697 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:13.697 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:18.695 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:18.696 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:18.711 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:18.712 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:18.713 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:18.728 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:18.729 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:23.724 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:23.727 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:23.740 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:23.742 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:23.744 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:23.758 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:23.759 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:28.748 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:28.748 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:28.763 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:28.764 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:28.764 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:28.780 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:28.781 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:33.774 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:33.774 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:33.790 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:33.790 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:33.791 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:33.807 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:33.807 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:38.793 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:38.793 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:38.809 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:38.809 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:38.810 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:38.825 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:38.825 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:43.813 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:43.814 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:43.829 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:43.830 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:43.830 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:43.845 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:43.845 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:48.843 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:48.844 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:48.859 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:48.859 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:48.859 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:48.875 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:48.876 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:53.874 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:53.874 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:53.890 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:53.890 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:53.890 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:53.906 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:53.907 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:26:58.904 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018348565
+2025-06-04 01:26:58.904 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:58.920 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:26:58.920 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:26:58.921 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:58.936 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:26:58.936 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:27:01.282 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1749018421282, current=DOWN, previous=UP]
+2025-06-04 01:27:01.288 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1749018421288, current=UP, previous=DOWN]
+2025-06-04 01:27:01.289 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac: registering service...
+2025-06-04 01:27:01.290 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/CUSTOMER-SERVICE
+2025-06-04 01:27:01.290 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:27:01.290 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac, appName = CUSTOMER-SERVICE, hostName = 192.168.100.19, status = UP, ipAddr = 192.168.100.19, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@393e7546] as "application/json"
+2025-06-04 01:27:01.296 [DiscoveryClient-InstanceInfoReplicator-0] DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-06-04 01:27:01.296 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac - registration status: 204
+2025-06-04 01:27:03.927 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac?status=UP&lastDirtyTimestamp=1749018421288
+2025-06-04 01:27:03.927 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:27:03.943 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-06-04 01:27:03.943 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:27:03.944 [DiscoveryClient-HeartbeatExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:27:03.960 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:27:03.960 [DiscoveryClient-CacheRefreshExecutor-0] DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-06-04 01:27:05.517 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-06-04 01:27:08.529 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-06-04 01:27:08.531 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - HTTP DELETE http://localhost:8761/eureka/apps/CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac
+2025-06-04 01:27:08.532 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 01:27:08.544 [SpringApplicationShutdownHook] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 01:27:08.544 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICE/customer-service:0c3df8a09bf5114b85c5d1f96b73a5ac - deregister  status: 200
+2025-06-04 01:27:08.548 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

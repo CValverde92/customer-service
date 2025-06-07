@@ -1,0 +1,340 @@
+openapi: 3.0.3
+info:
+  title: Customer Management API
+  description: API for managing bank customers (personal and business)
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+tags:
+  - name: Customers
+    description: Customer management operations
+security:
+  - bearerAuth: [ ]
+paths:
+  /customers:
+    post:
+      tags: [ Customers ]
+      summary: Create a new customer
+      operationId: createCustomer
+      parameters:
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustomerRequest'
+      responses:
+        '201':
+          description: Customer created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+    get:
+      tags: [ Customers ]
+      summary: List all customers
+      operationId: listCustomers
+      parameters:
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerResponse'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /customers/{customerId}:
+    get:
+      tags: [ Customers ]
+      summary: Get customer details
+      operationId: getCustomer
+      parameters:
+        - $ref: '#/components/parameters/CustomerIdPath'
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      responses:
+        '200':
+          description: Customer details retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      tags: [ Customers ]
+      summary: Update customer
+      operationId: updateCustomer
+      parameters:
+        - $ref: '#/components/parameters/CustomerIdPath'
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomerRequest'
+      responses:
+        '200':
+          description: Customer updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+    delete:
+      tags: [ Customers ]
+      summary: Delete customer
+      operationId: deleteCustomer
+      parameters:
+        - $ref: '#/components/parameters/CustomerIdPath'
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      responses:
+        '204':
+          description: Customer deleted successfully
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /customers/{customerId}/type:
+    get:
+      tags: [ Customers ]
+      summary: Get customer type
+      operationId: getCustomerType
+      parameters:
+        - $ref: '#/components/parameters/CustomerIdPath'
+        - $ref: "#/components/parameters/Authorization"
+        - $ref: "#/components/parameters/Request-ID"
+      responses:
+        '200':
+          description: Customer type retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerTypeResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  schemas:
+    CreateCustomerRequest:
+      type: object
+      required:
+        - type
+        - documentNumber
+        - name
+      properties:
+        type:
+          $ref: '#/components/schemas/CustomerType'
+        documentNumber:
+          type: string
+          description: Customer identification number
+          minLength: 8
+          maxLength: 11
+          pattern: ^[0-9]+$
+          example: "12345678"
+        name:
+          type: string
+          description: Full name or business name
+          minLength: 3
+          maxLength: 100
+          example: "John Doe"
+        email:
+          type: string
+          format: email
+          example: "john.doe@example.com"
+        phone:
+          type: string
+          example: "+51987654321"
+        address:
+          $ref: '#/components/schemas/Address'
+        businessInfo:
+          $ref: '#/components/schemas/BusinessInfo'
+
+    UpdateCustomerRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full name or business name
+          minLength: 3
+          maxLength: 100
+          example: "John Doe Updated"
+        email:
+          type: string
+          format: email
+          example: "updated.email@example.com"
+        phone:
+          type: string
+          example: "+51987654321"
+        address:
+          $ref: '#/components/schemas/Address'
+        businessInfo:
+          $ref: '#/components/schemas/BusinessInfo'
+
+    CustomerResponse:
+      allOf:
+        - $ref: '#/components/schemas/CreateCustomerRequest'
+        - type: object
+          properties:
+            id:
+              type: string
+              example: "507f1f77bcf86cd799439011"
+            status:
+              $ref: '#/components/schemas/CustomerStatus'
+            createdAt:
+              type: string
+              format: date
+              example: "2023-01-01"
+            updatedAt:
+              type: string
+              format: date
+              example: "2023-01-01"
+
+    CustomerTypeResponse:
+      type: object
+      properties:
+        customerId:
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        type:
+          $ref: '#/components/schemas/CustomerType'
+
+    CustomerType:
+      type: string
+      enum: [ PERSONAL, BUSINESS ]
+      example: PERSONAL
+
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: "123 Main St"
+        city:
+          type: string
+          example: "Lima"
+        state:
+          type: string
+          example: "Lima"
+        country:
+          type: string
+          example: "Peru"
+        zipCode:
+          type: string
+          example: "15001"
+
+    BusinessInfo:
+      type: object
+      required:
+        - businessName
+        - taxId
+      properties:
+        businessName:
+          type: string
+          example: "Acme Corp"
+        taxId:
+          type: string
+          example: "20123456789"
+        industry:
+          type: string
+          example: "Technology"
+        foundationDate:
+          type: string
+          format: date
+          example: "2010-01-01"
+
+    CustomerStatus:
+      type: string
+      enum: [ ACTIVE, INACTIVE, SUSPENDED ]
+      example: ACTIVE
+
+    Error:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date
+          example: "2023-01-01"
+        code:
+          type: string
+          example: "CUS-400"
+        message:
+          type: string
+          example: "Validation error"
+        details:
+          type: array
+          items:
+            type: string
+            example: "Invalid document number format"
+
+  parameters:
+    CustomerIdPath:
+      name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: ^[0-9a-fA-F]{24}$
+        example: "507f1f77bcf86cd799439011"
+
+    Authorization:
+      name: Authorization
+      in: header
+      description: Token de autorización
+      required: true
+      schema:
+        type: string
+        example: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE3MTAyOTQ0MDAsInJvbGUiOiJhZG1pbiIsImN1c3RvbWVySWQiOiI1MDdmMWY3N2JjZjg2Y2Q3OTk0MzkwMTEifQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    Request-ID:
+      name: Request-ID
+      in: header
+      description: 'Este campo es un valor estandar ya existente y sera usado como identificador.'
+      required: true
+      schema:
+        type: string
+        maxLength: 36
+        pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[34][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+        example: '550e8400-e29b-41d4-a716-446655440000'
+
+  responses:
+    BadRequest:
+      description: Invalid request data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

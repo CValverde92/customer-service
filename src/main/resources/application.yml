@@ -1,0 +1,51 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: customer-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/customerdb
+  cloud:
+    loadbalancer:
+      enabled: true  # Habilitado para comunicación con otros servicios
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # O puedes especificar solo los que necesitas: "health,info,metrics"
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.nttdata.customer_service: DEBUG # Reemplaza con tu paquete base
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 5  # Frecuencia de actualización del registro
+    healthcheck:
+      enabled: true  # Habilita health checks
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+
+# Configuración personalizada para llamadas a account-service
+services:
+  account:
+    url: http://account-service
+    timeout: 5000  # Timeout en milisegundos
